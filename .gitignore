@@ -1,3 +1,6 @@
 # pi hole volume
 etc-dnsmasq.d
 etc-pihole
+
+# Node module
+node_modules
