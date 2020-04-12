@@ -1,0 +1,13 @@
+{
+  "name": "pihole-deploy",
+  "version": "1.0.0",
+  "description": "Run pi-hole",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose stop",
+    "watch": "docker-compose up",
+    "log": "docker-compose logs -f pihole"
+  },
+  "author": "hongarc<aqua.hong.97@gmail.com>",
+  "license": "MIT"
+}
