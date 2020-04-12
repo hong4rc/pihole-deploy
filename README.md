@@ -2,8 +2,10 @@
 
 ## Usage
  - Require `docker` + `docker-compose`
- - Start `pihole` with Docker: `docker-compose up -d`
+ - Start `pihole` with Docker compose: `docker-compose up -d`
  - Change your dns to `127.0.0.1` (or IP in LAN for another device in LAN)
+
+*__Note:__ my Adlists `https://raw.githubusercontent.com/Hongarc/pihole-deploy/master/custom/data.txt`*
 
 ## Dashboard
 
