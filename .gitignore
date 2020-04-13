@@ -4,3 +4,8 @@ etc-pihole
 
 # Node module
 node_modules
+package-lock.json
+
+# Data after gen
+custom/*.txt
+!custom/dbl.txt

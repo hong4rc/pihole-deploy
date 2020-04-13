@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Run pi-hole",
   "scripts": {
+    "gen": "node gen-host.js",
     "start": "docker-compose up -d",
     "stop": "docker-compose stop",
     "watch": "docker-compose up",

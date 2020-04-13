@@ -47,6 +47,8 @@ const hosts = [
   'https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt',
 ];
 
+const fmUrl = (url) => url.replace(/^.*\/\//, '').replace(/[^\d.a-z]/gi, '.');
+
 const removeDups = (names) => {
   const unique = {};
   names.forEach((i) => {
@@ -73,6 +75,7 @@ const parse = (data) => {
 const parstHost = (host) => axios.get(host)
   .then((response) => {
     console.log('ok', host);
+    writeFileSync(`./custom/_${fmUrl(host)}`, response.data);
     return parse(response.data);
   });
 
@@ -88,7 +91,7 @@ Promise.all(hosts.map(parstHost))
     const myHost = removeDups(listHost.flat().sort());
     console.log(myHost.length);
 
-    writeFileSync('./custom/data.txt', myHost.join('\n'));
+    writeFileSync('./custom/host.txt', myHost.join('\n'));
     console.timeEnd('parse');
     console.timeEnd('all');
   });
