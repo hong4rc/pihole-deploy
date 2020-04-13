@@ -7,6 +7,19 @@
 
 *__Note:__ my Adlists `https://hongarc.github.io/pihole-deploy/host.txt`*
 
+## Conflict systemd-resolved
+
+> Error starting userland proxy: listen tcp 0.0.0.0:53: bind: address already in use
+
+How to fix:
+ - Remove or disable `systemd-resolved` (https://github.com/sameersbn/docker-bind/issues/65):
+   - sudo systemctl stop systemd-resolved
+   - sudo systemctl disable systemd-resolved
+
+ - Disable the stub listener (https://unix.stackexchange.com/a/358485):
+   - Add `DNSStubListener=no` to `/etc/systemd/resolved.conf`
+   - `sudo systemctl restart  systemd-resolved`
+
 ## Dashboard
 
 Go to `http://localhost/admin/index.php`, if your 80 port is used, change to another port in `docker-compose.yaml`
