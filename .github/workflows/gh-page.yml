@@ -23,5 +23,6 @@ jobs:
         BRANCH: gh-pages
         FOLDER: custom
         COMMIT_MESSAGE: Bump host
+        SINGLE_COMMIT: true
       env:
         CI: true
