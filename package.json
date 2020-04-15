@@ -9,7 +9,7 @@
     "watch": "docker-compose up",
     "log": "docker-compose logs -f pihole"
   },
-  "author": "hongarc<aqua.hong.97@gmail.com>",
+  "author": "Hong4rc <hong4rc@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2"
