@@ -4,6 +4,7 @@
     "plugin:unicorn/recommended"
   ],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "unicorn/no-array-for-each": "off"
   }
 }
